@@ -6,9 +6,6 @@
   padding: 1em;
   box-sizing: border-box;
 }
-.feed {
-  background-color: antiquewhite;
-}
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -43,10 +40,13 @@
   justify-content: center;
   gap: 0.5em;
 }
+.section-name:hover, .cv:hover,.profile-name:hover{
+  cursor: pointer;
+}
 .cv{
   display: flex;
   align-items: start;
-  gap: 1em;
+  gap: 0.5em;
   margin-top: 0.5em;
   margin-left: 1.5em;
 }

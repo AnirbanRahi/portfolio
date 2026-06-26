@@ -8,7 +8,7 @@ import { GoLightBulb } from "react-icons/go";
 import { SlGraduation } from "react-icons/sl";
 import { RiContactsLine } from "react-icons/ri";
 import { GoDownload } from "react-icons/go";
-function Sidebar() {
+function Sidebar({ setActiveSection }) {
   return (
     <>
       <div className="sidebar">
@@ -23,27 +23,45 @@ function Sidebar() {
           Download CV
         </div>
         <div className="sections">
-          <section className="section-name">
+          <section
+            className="section-name"
+            onClick={() => setActiveSection("home")}
+          >
             <PiCoffeeThin />
             Home
           </section>
-          <section className="section-name">
+          <section
+            className="section-name"
+            onClick={() => setActiveSection("about")}
+          >
             <CiAt />
             About
           </section>
-          <section className="section-name">
+          <section
+            className="section-name"
+            onClick={() => setActiveSection("projects")}
+          >
             <GoGitMergeQueue />
             Projects
           </section>
-          <section className="section-name">
+          <section
+            className="section-name"
+            onClick={() => setActiveSection("skills")}
+          >
             <GoLightBulb />
             Skills
           </section>
-          <section className="section-name">
+          <section
+            className="section-name"
+            onClick={() => setActiveSection("education_career")}
+          >
             <SlGraduation />
             Education & Career
           </section>
-          <section className="section-name">
+          <section
+            className="section-name"
+            onClick={() => setActiveSection("contacts")}
+          >
             <RiContactsLine />
             Contacts
           </section>
