@@ -1,30 +1,211 @@
-.home{
-    background-color: green;
-    height: 100%;
-    width: 100%;
+.home,
+.about,
+.skills,
+.contacts,
+.education_career {
+  height: 100%;
+  width: 100%;
 }
-.about{
-    background-color: rgb(43, 154, 188);
-    height: 100%;
-    width: 100%;
+section {
+  scroll-margin-top: 55px; /* adjust to match your header height */
 }
-.skills{
-    background-color: rgb(196, 41, 100);
-    height: 100%;
-    width: 100%;
+.projects {
+  width: 100%;
+  box-sizing: border-box;
 }
-.contacts{
-    background-color: rgb(150, 137, 17);
-    height: 100%;
-    width: 100%;
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  background: #FCFBF7;
+  overflow: hidden;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 4px 10px rgba(0, 0, 0, 0.06);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
-.education_career{
-    background-color: rgb(9, 12, 9);
-    height: 100%;
-    width: 100%;
+
+.project-card:hover {
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.1),
+    0 20px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
-.projects{
-    background-color: rgb(22, 22, 201);
-    height: 100%;
-    width: 100%;
+
+.project-screenshot {
+  width: 100%;
+  height: 11rem;
+  overflow: hidden;
+  background: #f4f4f5;
+}
+
+.encrypta {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .encrypta {
+  transform: scale(1.06);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #52525b;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Finished — static muted blue-gray dot */
+.status-dot.finished {
+  background-color: #94a3b8;
+}
+
+/* Developing — pulsing green glow */
+.status-dot.developing {
+  background-color: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(34, 197, 94, 0);
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    opacity: 1;
+  }
+}
+
+.project-description {
+  font-size: 0.78em;
+  font-weight: 400;
+  color: #52525b;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+.project-tectstack-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+}
+
+.techlist {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0.2em 0.65em;
+  font-size: 0.72em;
+  font-weight: 500;
+  border: 1px solid #d4d4d8;
+  border-radius: 9999px;
+  color: #3f3f46;
+  background: transparent;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.25rem;
+  padding-top: 0.1rem;
+}
+
+.download-exe,
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  color: #3f3f46;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.download-exe:hover,
+.github-link:hover {
+  color: #09090b;
+}
+
+.download-exe svg,
+.github-link svg {
+  font-size: 1rem;
+}
+
+/* Skill Section */
+.skills {
+  width: 100%;
+}
+
+.skill-card {
+  width: 100px;
+  height: 100px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.25s;
+}
+
+.skill-card svg {
+  font-size: 42px;
+}
+
+.skill-card span {
+  font-size: 0.9rem;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: #9d9fa1;
+  box-shadow: 0 10px 30px rgba(79, 140, 255, 0.25);
 }

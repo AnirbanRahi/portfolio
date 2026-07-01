@@ -1,22 +1,20 @@
-.main-layout {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 2em;
-  min-height: 100vh;
-  padding: 1em;
-  box-sizing: border-box;
+.full-body {
+  background-color: #fafaf7;
 }
+
 .sidebar {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   background-color: #f6f6f6;
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.03),
-    0 1px 3px rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  border-radius: .5em;
+  background-color: #FCFBF7;
+  background-color: #F7F5EF;
+  /* background-color: #FAFAFA; */
+  /* background-color: #FDFBF5; */
+  border: 1px solid #E7E5DF;
 }
+
 .profile-picture {
   width: 100px;
   height: 100px;
@@ -37,15 +35,17 @@
 }
 .section-name {
   display: flex;
-  justify-content: center;
   gap: 0.5em;
+  align-items: center;
 }
-.section-name:hover, .cv:hover,.profile-name:hover{
+.section-name:hover,
+.cv:hover,
+.profile-name:hover {
   cursor: pointer;
 }
-.cv{
+.cv {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 0.5em;
   margin-top: 0.5em;
   margin-left: 1.5em;
@@ -57,4 +57,21 @@
   gap: 1em;
   margin-top: 2em;
   margin-left: 1.5em;
+}
+.current-section {
+  width: 100%;
+  height: 10em;
+}
+
+.feed > section {
+  scroll-margin-top: 50px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
 }

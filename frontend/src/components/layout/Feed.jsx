@@ -4,21 +4,35 @@ import Projects from "../sections/Projects.jsx";
 import Skills from "../sections/Skills.jsx";
 import Education_Career from "../sections/Education_Career.jsx";
 import Contacts from "../sections/Contacts.jsx";
-function Feed({ activeSection }) {
-  if (activeSection === "home") {
-    return <Home />;
-  } else if (activeSection === "about") {
-    return <About />;
-  } else if (activeSection === "projects") {
-    return <Projects />;
-  } else if (activeSection === "skills") {
-    return <Skills />;
-  } else if (activeSection === "education_career") {
-    return <Education_Career />;
-  } else if (activeSection === "contacts") {
-    return <Contacts />;
-  } else {
-    return <Home />;
-  }
+
+function Feed() {
+  return (
+    <div className="feed">
+      <section id="home">
+        <Home />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="education_career">
+        <Education_Career />
+      </section>
+
+      <section id="contacts">
+        <Contacts />
+      </section>
+    </div>
+  );
 }
+
 export default Feed;

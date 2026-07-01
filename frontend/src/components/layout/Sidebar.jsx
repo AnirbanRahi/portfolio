@@ -8,10 +8,22 @@ import { GoLightBulb } from "react-icons/go";
 import { SlGraduation } from "react-icons/sl";
 import { RiContactsLine } from "react-icons/ri";
 import { GoDownload } from "react-icons/go";
+import Cute_GhostCanvas from "../Cute_GhostCanvas";
 function Sidebar({ setActiveSection }) {
+  const scrollToSection = (id, label) => {
+    setActiveSection(label);
+
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <>
-      <div className="sidebar">
+      <div className="sidebar rounded-sm backdrop-blur-md">
+        {/* <div style={{ width: 300, height: 300 }}>
+          <Cute_GhostCanvas />
+        </div> */}
         <p className="profile-name">Anirban Rahi</p>
         <div className="social-logo">
           <FaLinkedin />
@@ -25,42 +37,44 @@ function Sidebar({ setActiveSection }) {
         <div className="sections">
           <section
             className="section-name"
-            onClick={() => setActiveSection("home")}
+            onClick={() => scrollToSection("home", "Home")}
           >
             <PiCoffeeThin />
             Home
           </section>
           <section
             className="section-name"
-            onClick={() => setActiveSection("about")}
+            onClick={() => scrollToSection("about", "About")}
           >
             <CiAt />
             About
           </section>
           <section
             className="section-name"
-            onClick={() => setActiveSection("projects")}
+            onClick={() => scrollToSection("projects", "Projects")}
           >
             <GoGitMergeQueue />
             Projects
           </section>
           <section
             className="section-name"
-            onClick={() => setActiveSection("skills")}
+            onClick={() => scrollToSection("skills", "Skills")}
           >
             <GoLightBulb />
             Skills
           </section>
           <section
             className="section-name"
-            onClick={() => setActiveSection("education_career")}
+            onClick={() =>
+              scrollToSection("education_career", "Education & Career")
+            }
           >
             <SlGraduation />
             Education & Career
           </section>
           <section
             className="section-name"
-            onClick={() => setActiveSection("contacts")}
+            onClick={() => scrollToSection("contacts", "Contacts")}
           >
             <RiContactsLine />
             Contacts
