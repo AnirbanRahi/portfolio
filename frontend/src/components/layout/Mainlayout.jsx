@@ -1,4 +1,5 @@
 import Sidebar from "./Sidebar";
+import { Sidebar_Mid_Sm_Top, Sidebar_Mid_Sm_Bottom } from "./Sidebar_Mid_Sm";
 import Feed from "./Feed";
 import "./components.css";
 import { useState, useEffect, useRef } from "react";
@@ -9,7 +10,14 @@ function MainLayout() {
 
   // Auto-detect active section on scroll using IntersectionObserver
   useEffect(() => {
-    const sectionIds = ["home", "about", "projects", "skills", "education_career", "contacts"];
+    const sectionIds = [
+      "home",
+      "about",
+      "projects",
+      "skills",
+      "education_career",
+      "contacts",
+    ];
     const sectionLabels = {
       home: "Home",
       about: "About",
@@ -35,7 +43,7 @@ function MainLayout() {
           root: mainRef.current,
           rootMargin: "-40% 0px -55% 0px", // trigger when section is ~top-area of viewport
           threshold: 0,
-        }
+        },
       );
 
       observer.observe(el);
@@ -47,20 +55,31 @@ function MainLayout() {
 
   return (
     <div className="full-body h-screen overflow-hidden bg-[#fafaf7]">
-      <div className="grid h-full grid-cols-1 lg:grid-cols-[220px_1fr] gap-4">
-        <aside className="order-2 lg:order-1">
+      <div className="flex flex-col lg:grid h-full lg:grid-cols-[220px_1fr] lg:gap-4">
+        
+        {/* Mobile Top Accordion */}
+        <div className="block lg:hidden shrink-0 z-50">
+          <Sidebar_Mid_Sm_Top setActiveSection={setActiveSection} />
+        </div>
+
+        {/* Desktop Sidebar */}
+        <aside className="hidden lg:block">
           <Sidebar setActiveSection={setActiveSection} />
         </aside>
 
+        {/* Scrollable Main Content */}
         <main
           ref={mainRef}
-          className="order-1 lg:order-2 h-full overflow-y-auto rounded-sm no-scrollbar"
+          className="flex-1 lg:h-full overflow-y-auto rounded-sm no-scrollbar"
         >
-          <header className="sticky top-0 z-20 border-b backdrop-blur-md pt-6">
-            <h1 className="text-3xl font-bold">{activeSection}</h1>
-          </header>
           <Feed />
         </main>
+
+        {/* Mobile Bottom Navigation */}
+        <div className="block lg:hidden shrink-0 z-50">
+          <Sidebar_Mid_Sm_Bottom setActiveSection={setActiveSection} />
+        </div>
+
       </div>
     </div>
   );

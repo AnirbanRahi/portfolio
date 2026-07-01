@@ -36,7 +36,7 @@ import { FaMemory } from "react-icons/fa6";
 function Skills() {
   return (
     <>
-      <div className="skills h-full">
+      <div className="skills h-full py-12 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {/* Programming Languages */}
           <div className="skill-category rounded-2xl border border-white/10  p-6">
@@ -45,19 +45,10 @@ function Skills() {
             </h3>
 
             <div className="grid grid-cols-3 gap-4">
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <FaMemory size={28} color="#A8B9CC" />
-                <span>Assembly</span>
-              </div>
-
+             
               <div className="skill-card flex flex-col items-center justify-center gap-2">
                 <SiCplusplus size={28} color="#00599C" />
                 <span>C/C++</span>
-              </div>
-
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <span className="text-2xl">☕</span>
-                <span>Java</span>
               </div>
 
               <div className="skill-card flex flex-col items-center justify-center gap-2">
@@ -82,15 +73,9 @@ function Skills() {
             <h3 className="mb-5 text-xl font-semibold">Frontend</h3>
 
             <div className="grid grid-cols-3 gap-4">
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <SiHtml5 size={28} color="#E34F26" />
-                <span>HTML5</span>
-              </div>
+            
 
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <SiCss size={28} color="#1572B6" />
-                <span>CSS3</span>
-              </div>
+              
 
               <div className="skill-card flex flex-col items-center justify-center gap-2">
                 <SiReact size={28} color="#61DAFB" />
@@ -107,10 +92,6 @@ function Skills() {
                 <span>Flutter</span>
               </div>
 
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <span className="text-2xl">B</span>
-                <span>Bootstrap</span>
-              </div>
             </div>
           </div>
 
@@ -134,20 +115,6 @@ function Skills() {
                 <span>Linux</span>
               </div>
 
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <SiNpm size={28} color="#CB3837" />
-                <span>npm</span>
-              </div>
-
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <SiPostman size={28} color="#FF6C37" />
-                <span>Postman</span>
-              </div>
-
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <SiDocker size={28} color="#2496ED" />
-                <span>Docker</span>
-              </div>
             </div>
           </div>
 
@@ -166,10 +133,6 @@ function Skills() {
                 <span>Express.js</span>
               </div>
 
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <SiDjango size={28} color="#092E20" />
-                <span>Django</span>
-              </div>
             </div>
           </div>
 
@@ -202,11 +165,6 @@ function Skills() {
               <div className="skill-card flex flex-col items-center justify-center gap-2">
                 <SiFigma size={28} color="#F24E1E" />
                 <span>Figma</span>
-              </div>
-
-              <div className="skill-card flex flex-col items-center justify-center gap-2">
-                <span className="text-2xl">☕</span>
-                <span>Matlab</span>
               </div>
 
               <div className="skill-card flex flex-col items-center justify-center gap-2">
