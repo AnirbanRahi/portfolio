@@ -47,14 +47,14 @@ function MainLayout() {
 
   return (
     <div className="full-body h-screen overflow-hidden bg-[#fafaf7]">
-      <div className="grid h-full grid-cols-[220px_1fr] gap-4">
-        <aside className="">
+      <div className="grid h-full grid-cols-1 lg:grid-cols-[220px_1fr] gap-4">
+        <aside className="order-2 lg:order-1">
           <Sidebar setActiveSection={setActiveSection} />
         </aside>
 
         <main
           ref={mainRef}
-          className="h-full overflow-y-auto rounded-sm no-scrollbar"
+          className="order-1 lg:order-2 h-full overflow-y-auto rounded-sm no-scrollbar"
         >
           <header className="sticky top-0 z-20 border-b backdrop-blur-md pt-6">
             <h1 className="text-3xl font-bold">{activeSection}</h1>
