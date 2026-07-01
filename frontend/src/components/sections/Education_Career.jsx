@@ -46,16 +46,13 @@ export default function Education_Career() {
   ];
 
   return (
-    <section className="py-12 md:py-12 overflow-hidden" id="education">
+    <section className="education_career py-12 md:py-12 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16 md:mb-24 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-            {/* Education <span className="text-blue-600">&amp;</span> Career */}
+        
+        <div className="text-center mb-16 md:mb-16">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-4">
             My academic journey
           </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            {/* My academic journey and professional milestones. */}
-          </p>
         </div>
 
         <div className="relative">
