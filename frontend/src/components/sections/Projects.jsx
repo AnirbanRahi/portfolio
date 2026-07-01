@@ -31,7 +31,7 @@ function Projects() {
         {/* Farmer App */}
         <div className="project-card">
           <div className="project-screenshot">
-            <img src={encrypta} alt="" className="encrypta" />
+            <img src={encrypta} alt="" className="project-ss" />
           </div>
           <div className="card-body">
             <div className="card-header-row">
@@ -87,7 +87,7 @@ function Projects() {
         {/* Encrypta */}
         <div className="project-card">
           <div className="project-screenshot">
-            <img src={encrypta} alt="" className="encrypta" />
+            <img src={encrypta} alt="" className="project-ss" />
           </div>
           <div className="card-body">
             <div className="card-header-row">
@@ -143,7 +143,7 @@ function Projects() {
         {/* Musiclay */}
         <div className="project-card">
           <div className="project-screenshot">
-            <img src={encrypta} alt="" className="encrypta" />
+            <img src={encrypta} alt="" className="project-ss" />
           </div>
           <div className="card-body">
             <div className="card-header-row">
@@ -199,7 +199,7 @@ function Projects() {
         {/* Shop Manager */}
         <div className="project-card">
           <div className="project-screenshot">
-            <img src={encrypta} alt="" className="encrypta" />
+            <img src={encrypta} alt="" className="project-ss" />
           </div>
           <div className="card-body">
             <div className="card-header-row">

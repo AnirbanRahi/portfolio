@@ -46,7 +46,7 @@ function MainLayout() {
   }, []);
 
   return (
-    <div className="full-body h-screen overflow-hidden">
+    <div className="full-body h-screen overflow-hidden bg-[#fafaf7]">
       <div className="grid h-full grid-cols-[220px_1fr] gap-4">
         <aside className="">
           <Sidebar setActiveSection={setActiveSection} />
@@ -57,7 +57,7 @@ function MainLayout() {
           className="h-full overflow-y-auto rounded-sm no-scrollbar"
         >
           <header className="sticky top-0 z-20 border-b backdrop-blur-md pt-6">
-              <h1 className="text-3xl font-bold">{activeSection}</h1>
+            <h1 className="text-3xl font-bold">{activeSection}</h1>
           </header>
           <Feed />
         </main>
